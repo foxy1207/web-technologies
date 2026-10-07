@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Завдання 4. Анкета</title>
+  </head>
+  <body>
+    <div align="center">
+      <h1>Анкета для запису на IT-курси</h1>
+
+      <!-- method="get": після натискання «Надіслати (GET)» дані з'являться в адресному рядку -->
+      <form action="" method="get">
+        <table>
+          <tr>
+            <td>
+              <!-- 1. Особисті дані -->
+              <fieldset>
+                <legend>Особисті дані</legend>
+
+                <p>
+                  <label for="first_name">Ім'я*:</label><br />
+                  <input
+                    type="text"
+                    id="first_name"
+                    name="first_name"
+                    value=""
+                    placeholder="Наприклад: Олена"
+                    required
+                    tabindex="1"
+                  />
+                </p>
+
+                <p>
+                  <label for="last_name">Прізвище*:</label><br />
+                  <input
+                    type="text"
+                    id="last_name"
+                    name="last_name"
+                    value=""
+                    placeholder="Наприклад: Коваленко"
+                    required
+                    tabindex="2"
+                  />
+                </p>
+
+                <p>
+                  <label for="birth_date">Дата народження:</label><br />
+                  <input
+                    type="date"
+                    id="birth_date"
+                    name="birth_date"
+                    value=""
+                    tabindex="3"
+                  />
+                </p>
+
+                <p>
+                  <label for="city">Місто:</label><br />
+                  <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    value=""
+                    list="cities"
+                    placeholder="Почніть вводити назву міста"
+                    tabindex="4"
+                  />
+                  <datalist id="cities">
+                    <option value="Чернівці"></option>
+                    <option value="Київ"></option>
+                    <option value="Львів"></option>
+                    <option value="Харків"></option>
+                    <option value="Одеса"></option>
+                  </datalist>
+                </p>
+
+                <p>
+                  Курс навчання*:<br />
+                  <input
+                    type="radio"
+                    id="course1"
+                    name="course"
+                    value="1"
+                    required
+                    tabindex="5"
+                  />
+                  <label for="course1">1 курс</label>
+                  <input
+                    type="radio"
+                    id="course2"
+                    name="course"
+                    value="2"
+                    tabindex="6"
+                  />
+                  <label for="course2">2 курс</label>
+                  <input
+                    type="radio"
+                    id="course3"
+                    name="course"
+                    value="3"
+                    tabindex="7"
+                  />
+                  <label for="course3">3 курс</label>
+                </p>
+              </fieldset>
+
+              <!-- 2. Контакти та акаунт -->
+              <fieldset>
+                <legend>Контакти та акаунт</legend>
+
+                <p>
+                  <label for="email">Email*:</label><br />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value=""
+                    placeholder="name@example.com"
+                    required
+                    autocomplete="off"
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                    title="Формат: name@example.com"
+                    tabindex="8"
+                  />
+                </p>
+
+                <p>
+                  <label for="phone">Мобільний телефон*:</label><br />
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value=""
+                    placeholder="+380XXXXXXXXX"
+                    required
+                    pattern="\+380[0-9]{9}"
+                    title="Формат: +380 і ще 9 цифр"
+                    tabindex="9"
+                  />
+                </p>
+
+                <p>
+                  <label for="password">Пароль*:</label><br />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    value=""
+                    placeholder="6 символів: A-Z, a-z, 0-9"
+                    required
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6}"
+                    title="Рівно 6 символів, мінімум одна велика літера, одна мала і одна цифра"
+                    tabindex="10"
+                  />
+                </p>
+              </fieldset>
+
+              <!-- 3. Навчання -->
+              <fieldset>
+                <legend>Навчання</legend>
+
+                <p>
+                  <label for="direction">Напрям навчання:</label><br />
+                  <select id="direction" name="direction" tabindex="11">
+                    <option value="frontend">Frontend</option>
+                    <option value="backend">Backend</option>
+                    <option value="mobile" selected>Mobile</option>
+                    <option value="qa">QA</option>
+                    <option value="devops">DevOps</option>
+                  </select>
+                </p>
+
+                <p>
+                  <label for="languages"
+                    >Мови програмування, які знаєте (Ctrl + клік для
+                    кількох):</label
+                  ><br />
+                  <select
+                    id="languages"
+                    name="languages"
+                    multiple
+                    size="6"
+                    tabindex="12"
+                  >
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="csharp">C#</option>
+                    <option value="cpp">C++</option>
+                    <option value="php">PHP</option>
+                  </select>
+                </p>
+
+                <p>
+                  <label for="technology">Технологія, яку хочете вивчити:</label
+                  ><br />
+                  <select id="technology" name="technology" tabindex="13">
+                    <optgroup label="Frontend">
+                      <option value="html">HTML</option>
+                      <option value="typescript">TypeScript</option>
+                      <option value="react">React</option>
+                    </optgroup>
+                    <optgroup label="Backend">
+                      <option value="spring">Spring</option>
+                      <option value="django">Django</option>
+                      <option value="dotnet">.NET</option>
+                    </optgroup>
+                    <optgroup label="Бази даних">
+                      <option value="mysql">MySQL</option>
+                      <option value="postgresql">PostgreSQL</option>
+                      <option value="mongodb">MongoDB</option>
+                    </optgroup>
+                    <optgroup label="Інструменти">
+                      <option value="git">Git</option>
+                      <option value="docker">Docker</option>
+                      <option value="figma">Figma</option>
+                    </optgroup>
+                  </select>
+                </p>
+
+                <p>
+                  Формат навчання:<br />
+                  <input
+                    type="radio"
+                    id="online"
+                    name="format"
+                    value="online"
+                    tabindex="14"
+                  />
+                  <label for="online">Онлайн</label>
+                  <input
+                    type="radio"
+                    id="offline"
+                    name="format"
+                    value="offline"
+                    checked
+                    tabindex="15"
+                  />
+                  <label for="offline">Офлайн</label>
+                  <input
+                    type="radio"
+                    id="mixed"
+                    name="format"
+                    value="mixed"
+                    tabindex="16"
+                  />
+                  <label for="mixed">Змішаний</label>
+                </p>
+
+                <p>
+                  Що вас цікавить:<br />
+                  <input
+                    type="checkbox"
+                    id="int_web"
+                    name="interests"
+                    value="web"
+                    tabindex="17"
+                  />
+                  <label for="int_web">Веб-розробка</label>
+                  <input
+                    type="checkbox"
+                    id="int_mobile"
+                    name="interests"
+                    value="mobile"
+                    tabindex="18"
+                  />
+                  <label for="int_mobile">Мобільні застосунки</label><br />
+                  <input
+                    type="checkbox"
+                    id="int_games"
+                    name="interests"
+                    value="games"
+                    tabindex="19"
+                  />
+                  <label for="int_games">Ігри</label>
+                  <input
+                    type="checkbox"
+                    id="int_ai"
+                    name="interests"
+                    value="ai"
+                    tabindex="20"
+                  />
+                  <label for="int_ai">Штучний інтелект</label>
+                </p>
+              </fieldset>
+
+              <!-- 4. Додатково -->
+              <fieldset>
+                <legend>Додатково</legend>
+
+                <p>
+                  <label for="about">Розкажіть про себе:</label><br />
+                  <textarea
+                    id="about"
+                    name="about"
+                    rows="4"
+                    cols="40"
+                    placeholder="Чому хочете навчатися на курсах?"
+                    tabindex="21"
+                  ></textarea>
+                </p>
+
+                <p>
+                  <label for="audio"
+                    >Голосове привітання (лише аудіо, можна кілька):</label
+                  ><br />
+                  <input
+                    type="file"
+                    id="audio"
+                    name="audio"
+                    value=""
+                    accept="audio/*"
+                    multiple
+                    tabindex="22"
+                  />
+                </p>
+              </fieldset>
+
+              <p align="center">
+                <button type="submit" name="action" value="get" tabindex="23">
+                  Надіслати (GET)
+                </button>
+                <button
+                  type="submit"
+                  name="action"
+                  value="post"
+                  formmethod="post"
+                  formenctype="multipart/form-data"
+                  tabindex="24"
+                >
+                  Надіслати (POST)
+                </button>
+                <button type="reset" name="reset" value="reset" tabindex="25">
+                  Очистити
+                </button>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </form>
+
+      <!-- Пояснення структури запиту -->
+      <h2>Структура запиту</h2>
+
+      <p>
+        <b>method="get"</b> — дані додаються до URL-адреси після знака
+        <code>?</code><br />
+        у вигляді пар <code>name=value</code>, розділених <code>&amp;</code>:
+      </p>
+      <table>
+        <tr>
+          <td align="left">
+            <pre>
+questionnaire.html?first_name=Олена&amp;last_name=Коваленко
+  &amp;birth_date=2006-05-12&amp;city=Чернівці&amp;course=2
+  &amp;email=olena%40example.com&amp;phone=%2B380671234567
+  &amp;password=Abc123&amp;direction=mobile
+  &amp;languages=java&amp;languages=python&amp;technology=html
+  &amp;format=offline&amp;interests=web&amp;interests=ai
+  &amp;about=...&amp;audio=hello.mp3&amp;action=get</pre
+            >
+          </td>
+        </tr>
+      </table>
+      <p>
+        (в адресному рядку це один рядок, тут розбито для зручності читання)
+      </p>
+
+      <p>
+        <b>method="post" + enctype="multipart/form-data"</b> — дані не
+        потрапляють в URL,<br />
+        а передаються в тілі запиту окремими частинами. Тільки так можна
+        відправити самі файли:
+      </p>
+      <table>
+        <tr>
+          <td align="left">
+            <pre>
+POST /questionnaire.html HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxk
+
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="first_name"
+
+Олена
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="email"
+
+olena@example.com
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="audio"; filename="hello.mp3"
+Content-Type: audio/mpeg
+
+(вміст файлу)
+------WebKitFormBoundary7MA4YWxk--</pre
+            >
+          </td>
+        </tr>
+      </table>
+
+      <p><a href="../index.html">Повернутись на головну</a></p>
+    </div>
+  </body>
+</html>
