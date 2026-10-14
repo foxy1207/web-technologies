@@ -1,0 +1,59 @@
+/* 1. span всередині p з класом .text-background (нащадки: клас + тег) */
+.text-background span {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 2. span всередині .text-background, що лежить у div (тег + клас + тег) */
+div .text-background span {
+    background-color: yellow;
+}
+
+/* 3. span всередині іншого span (нащадки: два теги) */
+span span {
+    background-color: gray;
+    text-decoration: line-through;
+}
+
+/* 4. span у span, що знаходиться в нумерованому списку (три теги) */
+ol span span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* 5. абзаци першого рівня вкладеності в section (дочірній: два теги) */
+section > p {
+    text-shadow: 3px 3px 5px brown;
+    text-indent: 50px;
+}
+
+/* 6. ul, які лежать безпосередньо в li (дочірній: два теги) */
+li > ul {
+    list-style-image: url(li.svg);
+}
+
+/* 7. абзаци з класом .text-background першого рівня в div (дочірній: тег + клас) */
+div > .text-background {
+    word-spacing: 50px;
+}
+
+/* 8. абзаци першого рівня в div з класом .text-bold (дочірній: клас + тег) */
+.text-bold > p {
+    font-weight: bold;
+}
+
+/* 9. абзаци першого рівня в section, що є прямим нащадком .text-bold (клас + два теги) */
+.text-bold > section > p {
+    line-height: 45px;
+}
+
+/* 10. абзац, що стоїть одразу після img (наступний сусід) */
+img + p {
+    background-color: brown;
+}
+
+/* 11. абзаци, що стоять після section на тому ж рівні (усі наступні сусіди) */
+section ~ p {
+    color: red;
+}

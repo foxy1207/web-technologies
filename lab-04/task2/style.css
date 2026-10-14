@@ -1,0 +1,54 @@
+/* Селектори тегів */
+body {
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    border: 1px solid #9999cc;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 32px;
+    font-style: italic;
+}
+
+p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+hr {
+    width: 80%;
+    height: 6px;
+    background-color: green;
+    border: none;
+}
+
+/* Селектор ідентифікатора */
+#title {
+    font-size: 40px;
+    color: red;
+}
+
+/* Селектори класів */
+.name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.quote {
+    font-family: Consolas, "Courier New", monospace;
+    font-style: italic;
+    font-size: 18px;
+}
