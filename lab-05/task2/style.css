@@ -1,0 +1,55 @@
+/* Гама: фіолетова, від найсвітлішого до найтемнішого
+   #f1e9f7  #e1d0ef  #c9a9e2  #8e5bb8  #6a3a92  #4a2368
+   Селектори класів та ідентифікаторів не використовуються */
+
+/* 1. Таблиця */
+table {
+    border-collapse: collapse;
+    font-family: "Times New Roman", serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* 2. Усі клітинки: білі межі між ними та внутрішні відступи */
+th,
+td {
+    border: 2px solid white;
+    padding: 20px 25px;
+}
+
+/* 3. Шапка: кожен наступний стовпець темніший */
+th {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+th:nth-child(1) { background-color: #f1e9f7; font-size: 16px; }
+th:nth-child(2) { background-color: #e1d0ef; }
+th:nth-child(3) { background-color: #c9a9e2; }
+th:nth-child(4) { background-color: #8e5bb8; }
+th:nth-child(5) { background-color: #4a2368; }
+
+/* 4. Тіло таблиці: рядки чергуються (odd / even),
+      тому новий рядок автоматично отримає правильний колір */
+tbody tr:nth-child(odd) td {
+    background-color: #e1d0ef;
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #f1e9f7;
+}
+
+/* 5. Перший стовпець тіла — назви пунктів
+      (tbody tr td — щоб специфічність була вищою за правило смуг) */
+tbody tr td:first-child {
+    background-color: #6a3a92;
+    color: white;
+    text-align: left;
+}
+
+/* 6. Знаки «+» та «-» */
+tbody td:not(:first-child) {
+    color: #4a2368;
+    font-weight: bold;
+}

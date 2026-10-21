@@ -1,0 +1,142 @@
+/* 1. Сторінка */
+.page {
+    background-color: #eef3f8;
+    color: #1f2d3d;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Вирівнювання по центру (замість атрибута align="center") */
+.wrapper {
+    text-align: center;
+}
+
+/* 2. Заголовки */
+.title {
+    color: #1d4e89;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 #c7d9ee;
+}
+
+.subtitle {
+    color: #1d4e89;
+    font-size: 24px;
+    font-weight: 700;
+    border-bottom: 3px solid #4f8fd6;
+    display: inline-block;
+}
+
+/* 3. Таблиці-обгортки */
+.form-table,
+.code-table {
+    margin: 0 auto;
+}
+
+.cell {
+    text-align: left;
+}
+
+/* 4. Групи полів */
+.group {
+    background-color: white;
+    border: 2px solid #4f8fd6;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+}
+
+.group-title {
+    background-color: #1d4e89;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* 5. Підписи */
+.label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Підписи біля radio та checkbox */
+.choice-label {
+    font-style: italic;
+    margin-right: 10px;
+}
+
+/* 6. Поля введення (input, select, textarea) */
+.field {
+    background-color: #f7faff;
+    color: #1f2d3d;
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px solid #9bb8d9;
+    border-radius: 5px;
+    padding: 6px 10px;
+    width: 320px;
+}
+
+.field:focus {
+    background-color: #fffbe6;
+    outline: 2px solid #4f8fd6;
+}
+
+.field::placeholder {
+    color: #8a9bb0;
+    font-style: italic;
+}
+
+.file-field {
+    font-family: inherit;
+    font-size: 14px;
+}
+
+/* 7. Кнопки */
+.buttons {
+    text-align: center;
+}
+
+.btn {
+    background-color: #1d4e89;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #4f8fd6;
+}
+
+.btn-reset {
+    background-color: #c0392b;
+}
+
+/* 8. Блок з поясненням запиту */
+.code {
+    background-color: #1f2d3d;
+    color: #a8e6a1;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.inline-code {
+    background-color: #dde8f5;
+    color: #c0392b;
+    font-family: Consolas, "Courier New", monospace;
+    padding: 0 4px;
+}

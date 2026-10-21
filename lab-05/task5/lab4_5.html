@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 5. Завдання 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <!-- Частина 1. box-sizing -->
+    <h2 class="section-title">1. box-sizing</h2>
+    <div class="box content">
+        <b>box-sizing: content-box</b><br>
+        Загальна ширина: 300 + 2 × 20 + 2 × 5 = <b>350px</b>
+    </div>
+    <div class="box border">
+        <b>box-sizing: border-box</b><br>
+        Загальна ширина: <b>300px</b> (вміст: 300 − 40 − 10 = 250px)
+    </div>
+
+    <!-- Частина 2. overflow -->
+    <h2 class="section-title">2. overflow</h2>
+    <div class="over visible">
+        <b>overflow: visible</b><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatum! Repellendus,
+        totam. Nesciunt ut ipsam, quasi accusantium cupiditate voluptates neque dolores
+        perferendis sapiente, inventore officia. Dolorem eligendi corporis fugit sed.
+    </div>
+    <div class="over hidden">
+        <b>overflow: hidden</b><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatum! Repellendus,
+        totam. Nesciunt ut ipsam, quasi accusantium cupiditate voluptates neque dolores
+        perferendis sapiente, inventore officia. Dolorem eligendi corporis fugit sed.
+    </div>
+    <div class="over scroll">
+        <b>overflow: scroll</b><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatum! Repellendus,
+        totam. Nesciunt ut ipsam, quasi accusantium cupiditate voluptates neque dolores
+        perferendis sapiente, inventore officia. Dolorem eligendi corporis fugit sed.
+    </div>
+    <div class="over auto">
+        <b>overflow: auto</b><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatum! Repellendus,
+        totam. Nesciunt ut ipsam, quasi accusantium cupiditate voluptates neque dolores
+        perferendis sapiente, inventore officia. Dolorem eligendi corporis fugit sed.
+    </div>
+
+    <!-- Частина 3. display -->
+    <h2 class="section-title">3. display</h2>
+    <ul class="menu">
+        <li class="menu-item"><a class="menu-link" href="#">Головна</a></li>
+        <li class="menu-item"><a class="menu-link" href="#">Про нас</a></li>
+        <li class="menu-item"><a class="menu-link" href="#">Послуги</a></li>
+        <li class="menu-item hidden-item"><a class="menu-link" href="#">Архів</a></li>
+        <li class="menu-item"><a class="menu-link" href="#">Контакти</a></li>
+    </ul>
+</body>
+</html>

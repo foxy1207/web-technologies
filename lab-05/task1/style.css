@@ -1,0 +1,89 @@
+/* 1. Блок div */
+.travel {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* 2. Заголовок 1-го рівня */
+.travel-title {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+}
+
+/* 3. Загальні вимоги до списків:
+      маркер всередині вмісту, стандартний маркер прибираємо,
+      бо замість нього буде фонове зображення */
+.list-1,
+.list-2 {
+    list-style-position: inside;
+    list-style-type: none;
+    margin: 0;
+}
+
+/* 4. Маркерований список 1-го рівня */
+.list-1 {
+    background-color: rgb(103, 158, 128);
+    padding: 0 20px 0 50px;
+}
+
+/* Пункти 1-го рівня: іконка-маркер ліворуч від назви.
+   Від'ємний margin зсуває пункт у ліве поле (50px) списку,
+   щоб іконка стояла саме там, а текст лишився на своєму місці */
+.item-1 {
+    margin-left: -50px;
+    padding: 0 0 10px 50px;
+    background-image: url("icons/rule.svg");
+    background-position: 5px 3px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+}
+
+/* 5. Маркерований список 2-го рівня */
+.list-2 {
+    padding: 0;
+}
+
+.item-2 {
+    font-size: 18px;
+    font-style: italic;
+    background-color: rgb(153, 180, 102);
+    margin-bottom: 10px;
+    padding-left: 40px;
+    background-position: 2px center;
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+}
+
+/* Іконки-маркери для кожного пункту 2-го рівня */
+.route    { background-image: url("icons/ad_units.svg"); }
+.ticket   { background-image: url("icons/airplane_ticket.svg"); }
+.hotel    { background-image: url("icons/hotel.svg"); }
+.car      { background-image: url("icons/car_rental.svg"); }
+.bar      { background-image: url("icons/local_bar.svg"); }
+.casino   { background-image: url("icons/casino.svg"); }
+.museum   { background-image: url("icons/museum.svg"); }
+.festival { background-image: url("icons/festival.svg"); }
+
+/* 6. Усі span: відступи та рядково-блочний тип */
+.span-1,
+.span-2 {
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+/* 7. span у списку 1-го рівня */
+.span-1 {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106);
+    margin-bottom: 10px;
+}
+
+/* 8. span у списку 2-го рівня */
+.span-2 {
+    background-color: rgb(218, 106, 32);
+}

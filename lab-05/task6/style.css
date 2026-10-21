@@ -1,0 +1,151 @@
+/* ===== Фон сторінки ===== */
+.page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #222;
+    background-color: #1b2a41; /* запасний колір, поки фото не завантажилось */
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* фон стоїть на місці під час прокручування */
+}
+
+/* ===== Контейнер ===== */
+.container {
+    box-sizing: border-box;
+    max-width: 900px;
+    min-width: 320px;
+    margin: 0 auto; /* центрування по горизонталі */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85); /* напівпрозорий — видно фон сторінки */
+}
+
+/* Якщо вікно браузера вужче за 320px, контейнер далі не стискається:
+   min-width тримає його ширину 320px, він виходить за межі вікна
+   і в браузера з'являється горизонтальна смуга прокрутки. */
+
+.header {
+    text-align: center;
+}
+
+.title {
+    margin: 0 0 5px;
+    color: #1b2a41;
+}
+
+.subtitle {
+    margin: 0;
+    font-style: italic;
+}
+
+.section {
+    margin-top: 30px;
+}
+
+.section-title {
+    border-bottom: 2px solid #1b2a41;
+    padding-bottom: 5px;
+}
+
+/* ===== Блок «Теги» (display) ===== */
+.tag {
+    display: inline;
+    width: 200px;
+    height: 100px;
+    /* width і height не діють: елемент став рядковим (inline),
+       а розмір рядкового елемента визначається лише його вмістом */
+    padding: 5px 10px;
+    background-color: #1b2a41;
+    color: white;
+}
+
+.skill {
+    display: block;
+    width: 150px;
+    /* span став блоковим: кожен з нового рядка (стовпцем), і width діє */
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #c9d6ea;
+}
+
+/* перший span відсуваємо від рядка з тегами */
+.tag + .skill {
+    margin-top: 20px;
+}
+
+/* Підписи блоків — на білій плашці, щоб їх було видно поверх фону */
+.label {
+    display: inline-block;
+    padding: 3px 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #1b2a41;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+/* ===== Блок «Повторення фону» (background-repeat) ===== */
+.repeat {
+    height: 200px;
+    margin-bottom: 15px;
+    border: 2px solid #1b2a41;
+    background-color: #f4f4f4;
+    background-image: url("img/icon.png");
+    font-weight: bold;
+}
+
+.repeat-x     { background-repeat: repeat-x; }
+.repeat-y     { background-repeat: repeat-y; }
+.repeat-space { background-repeat: space; }
+.repeat-round { background-repeat: round; }
+
+/* space — картинки НЕ змінюють розмір: вміщується ціла кількість іконок,
+   а залишок місця рівномірно розподіляється порожніми проміжками між ними.
+   round — проміжків немає: іконки трохи розтягуються або стискаються,
+   щоб ціла кількість штук заповнила блок впритул. */
+
+/* ===== Блок «Масштабування» (background-size) ===== */
+.size {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 200px;
+    margin: 0 20px 20px 0;
+    border: 2px solid #1b2a41;
+    background-color: #f4f4f4;
+    background-image: url("img/photo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+.size-contain { background-size: contain; } /* фото видно повністю, можуть бути порожні поля */
+.size-cover   { background-size: cover; }   /* фото заповнює весь блок, краї обрізаються */
+
+/* ===== Блок «Прокручування фону» (background-attachment) ===== */
+.attach {
+    max-height: 150px;
+    overflow: auto;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    border: 2px solid #1b2a41;
+    background-image: url("img/texture.jpg");
+    background-color: #f4f4f4;
+}
+
+.attach-scroll {
+    background-attachment: scroll;
+}
+
+.attach-local {
+    background-attachment: local;
+}
+
+/* scroll — фон прив'язаний до самого блоку: коли гортаємо текст
+   всередині блоку, фон стоїть на місці, а текст їде поверх нього.
+   local — фон прив'язаний до вмісту блоку: при прокручуванні
+   всередині блоку фон рухається разом із текстом.
+   (Якщо гортати всю сторінку, обидва блоки рухаються разом зі своїм фоном.) */

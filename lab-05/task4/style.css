@@ -1,0 +1,59 @@
+/* Гама: синя
+   #e3f2fd  #90caf9  #42a5f5  #1e88e5  #1565c0  #0d47a1 */
+
+/* Спільні стилі для всіх блоків */
+.block {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    padding: 15px;
+    box-sizing: border-box; /* щоб блок був рівно 300 × 200 разом з padding */
+    vertical-align: top;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #0d47a1;
+}
+
+/* Блок 1. Діагональні смуги двох відтінків.
+   Кут 45deg, чіткі межі на 25% / 50% / 75%: якщо взяти лише одну межу 50%,
+   у квадраті 40×40 вийдуть трикутники, а 4 межі дають безперервні смуги */
+.block-1 {
+    background-image: linear-gradient(45deg,
+        #42a5f5 25%, #1e88e5 25%,
+        #1e88e5 50%, #42a5f5 50%,
+        #42a5f5 75%, #1e88e5 75%);
+    background-size: 40px 40px;
+}
+
+/* Блок 2. Клітинки: два градієнти під прямим кутом,
+   один колір напівпрозорий, другий — transparent */
+.block-2 {
+    background-color: #e3f2fd;
+    background-image:
+        linear-gradient(transparent 50%, rgba(21, 101, 192, 0.3) 50%),
+        linear-gradient(90deg, rgba(21, 101, 192, 0.3) 50%, transparent 50%);
+    background-size: 30px 30px;
+}
+
+/* Блок 3. Радіальний градієнт: коло, центр у точці 30px 20px,
+   розмір до найдальшого кута, 4 кольори з позиціями у % */
+.block-3 {
+    background-image: radial-gradient(circle farthest-corner at 30px 20px,
+        #e3f2fd 0%,
+        #90caf9 25%,
+        #1e88e5 60%,
+        #0d47a1 100%);
+}
+
+/* Блок 4. Два фони: суцільний колір + напівпрозорий градієнт поверх нього,
+   градієнт не повторюється, на всю ширину і 50% висоти, притиснутий донизу */
+.block-4 {
+    background-color: #42a5f5;
+    background-image: linear-gradient(to top, rgba(13, 71, 161, 0.8), transparent);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+}
