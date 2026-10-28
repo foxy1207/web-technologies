@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторна робота №6. Завдання 4</title>
+    <!-- Google Fonts Icons (Material Symbols) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <!-- ============ Горизонтальна панель (fixed) ============ -->
+    <nav class="topnav">
+      <ul class="topnav-list">
+        <li class="topnav-item">
+          <a
+            class="topnav-link topnav-link--active"
+            href="#home"
+            title="Головна"
+          >
+            <span class="material-symbols-outlined">home</span>
+          </a>
+        </li>
+        <li class="topnav-item">
+          <a class="topnav-link" href="#search" title="Пошук">
+            <span class="material-symbols-outlined">search</span>
+          </a>
+          <ul class="dropdown">
+            <li class="dropdown-item">
+              <a class="dropdown-link" href="#">Статті</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-link" href="#">Курси</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-link" href="#">Викладачі</a>
+            </li>
+          </ul>
+        </li>
+        <li class="topnav-item">
+          <a class="topnav-link" href="#mail" title="Пошта">
+            <span class="material-symbols-outlined">mail</span>
+          </a>
+          <ul class="dropdown">
+            <li class="dropdown-item">
+              <a class="dropdown-link" href="#">Вхідні</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-link" href="#">Надіслані</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-link" href="#">Чернетки</a>
+            </li>
+          </ul>
+        </li>
+        <li class="topnav-item">
+          <a class="topnav-link" href="#photos" title="Фото">
+            <span class="material-symbols-outlined">photo_library</span>
+          </a>
+        </li>
+        <!-- останній пункт вирівняний праворуч через float -->
+        <li class="topnav-item topnav-item--right">
+          <a class="topnav-link" href="#account" title="Акаунт">
+            <span class="material-symbols-outlined">account_circle</span>
+          </a>
+          <ul class="dropdown dropdown--right">
+            <li class="dropdown-item">
+              <a class="dropdown-link" href="#">Профіль</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-link" href="#">Налаштування</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-link" href="#">Вийти</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ============ Вертикальна панель (fixed, повна висота) ============ -->
+    <nav class="sidenav">
+      <ul class="sidenav-list">
+        <li class="sidenav-item">
+          <a class="sidenav-link sidenav-link--active" href="#home">
+            <span class="material-symbols-outlined sidenav-icon">home</span>Home
+          </a>
+        </li>
+        <li class="sidenav-item">
+          <a class="sidenav-link" href="#about">
+            <span class="material-symbols-outlined sidenav-icon">article</span
+            >About
+          </a>
+          <!-- 2-й рівень -->
+          <ul class="subnav">
+            <li class="subnav-item">
+              <a class="subnav-link" href="#">Біографія</a>
+            </li>
+            <li class="subnav-item">
+              <a class="subnav-link subnav-link--parent" href="#">Освіта</a>
+              <!-- 3-й рівень -->
+              <ul class="subnav">
+                <li class="subnav-item">
+                  <a class="subnav-link" href="#">Школа</a>
+                </li>
+                <li class="subnav-item">
+                  <a class="subnav-link" href="#">ЧНУ</a>
+                </li>
+                <li class="subnav-item">
+                  <a class="subnav-link" href="#">Курси</a>
+                </li>
+              </ul>
+            </li>
+            <li class="subnav-item">
+              <a class="subnav-link" href="#">Хобі</a>
+            </li>
+          </ul>
+        </li>
+        <li class="sidenav-item">
+          <a class="sidenav-link" href="#work">
+            <span class="material-symbols-outlined sidenav-icon">coffee</span
+            >Work With Me
+          </a>
+          <ul class="subnav">
+            <li class="subnav-item">
+              <a class="subnav-link subnav-link--parent" href="#">Послуги</a>
+              <ul class="subnav">
+                <li class="subnav-item">
+                  <a class="subnav-link" href="#">Верстка</a>
+                </li>
+                <li class="subnav-item">
+                  <a class="subnav-link" href="#">Дизайн</a>
+                </li>
+              </ul>
+            </li>
+            <li class="subnav-item">
+              <a class="subnav-link" href="#">Портфоліо</a>
+            </li>
+            <li class="subnav-item">
+              <a class="subnav-link" href="#">Ціни</a>
+            </li>
+          </ul>
+        </li>
+        <li class="sidenav-item">
+          <a class="sidenav-link" href="#contacts">
+            <span class="material-symbols-outlined sidenav-icon">call</span
+            >Contacts
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ============ Основний вміст ============ -->
+    <main class="content">
+      <section class="section" id="home">
+        <h1 class="section-title">Навігаційні панелі</h1>
+        <p class="text">
+          Зверху — горизонтальна панель значків, зафіксована (<code
+            >position: fixed</code
+          >) у верхній частині сторінки. Останній пункт вирівняний праворуч
+          через <code>float: right</code>. Ліворуч — вертикальна фіксована
+          панель на всю висоту з трьома рівнями вкладеності.
+        </p>
+        <p class="text">
+          Нижче розташована «липка» (<code>position: sticky</code>) панель:
+          прокрутіть сторінку — вона прилипне під верхньою панеллю.
+        </p>
+      </section>
+
+      <!-- ============ Sticky-панель ============ -->
+      <nav class="stickynav">
+        <ul class="stickynav-list">
+          <li class="stickynav-item">
+            <a class="stickynav-link stickynav-link--active" href="#home"
+              >Огляд</a
+            >
+          </li>
+          <li class="stickynav-item">
+            <a class="stickynav-link" href="#lessons">Уроки</a>
+            <ul class="dropdown">
+              <li class="dropdown-item">
+                <a class="dropdown-link" href="#">HTML</a>
+              </li>
+              <li class="dropdown-item">
+                <a class="dropdown-link" href="#">CSS</a>
+              </li>
+              <li class="dropdown-item">
+                <a class="dropdown-link" href="#">JavaScript</a>
+              </li>
+            </ul>
+          </li>
+          <li class="stickynav-item">
+            <a class="stickynav-link" href="#tasks">Завдання</a>
+          </li>
+          <li class="stickynav-item">
+            <a class="stickynav-link" href="#faq">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="section" id="lessons">
+        <h2 class="section-title">Уроки</h2>
+        <p class="text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+          odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
+          quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
+          mauris. Fusce nec tellus sed augue semper porta.
+        </p>
+        <p class="text">
+          Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti
+          sociosqu ad litora torquent per conubia nostra, per inceptos
+          himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia
+          nunc.
+        </p>
+      </section>
+      <section class="section" id="tasks">
+        <h2 class="section-title">Завдання</h2>
+        <p class="text">
+          Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem
+          at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut
+          ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel,
+          suscipit quis, luctus non, massa.
+        </p>
+        <p class="text">
+          Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus
+          metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque
+          volutpat condimentum velit.
+        </p>
+      </section>
+      <section class="section" id="faq">
+        <h2 class="section-title">FAQ</h2>
+        <p class="text">
+          Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+          per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt
+          mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis.
+        </p>
+        <p class="text">
+          Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a
+          tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam
+          ultrices.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

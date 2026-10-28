@@ -1,0 +1,55 @@
+.page {
+  margin: 0;
+  padding: 30px;
+  font-family: Calibri, Arial, sans-serif;
+}
+
+/* батьківський блок — відносно нього позиціонуються вкладені */
+.container {
+  position: relative;
+  width: 560px;
+  height: 420px;
+  margin: 0 auto;
+}
+
+.block {
+  position: absolute;
+  box-sizing: border-box;
+  border: 2px solid #222;
+  font-size: 24px;
+  line-height: 48px;
+  color: #111;
+}
+
+/* верхній широкий темно-зелений блок */
+.block-1 {
+  top: 10px;
+  left: 10px;
+  width: 540px;
+  height: 84px;
+  padding: 0 0 0 115px;
+  background-color: #00b050;
+  z-index: 1;
+}
+
+/* середній салатовий блок */
+.block-2 {
+  top: 116px;
+  left: 110px;
+  width: 326px;
+  height: 130px;
+  padding: 8px 60px 0 55px;
+  background-color: #92d050;
+  z-index: 2;
+}
+
+/* нижній синій блок */
+.block-3 {
+  top: 264px;
+  left: 160px;
+  width: 226px;
+  height: 146px;
+  padding: 0 60px 0 60px;
+  background-color: #558ed5;
+  z-index: 3;
+}
