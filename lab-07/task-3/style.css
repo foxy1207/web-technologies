@@ -1,0 +1,109 @@
+:root {
+  --color-text: #3c3c3c;
+  --color-muted: #8a8a8a;
+  --color-border: #d6d6d6;
+  --font-main: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.weather {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ---- верхня частина ---- */
+.current__city {
+  font-size: 64px;
+  font-weight: 400;
+  margin: 0;
+}
+.current__date,
+.current__desc {
+  color: var(--color-muted);
+  font-size: 22px;
+  margin: 4px 0;
+}
+
+.current__info {
+  display: flex; /* два блоки поруч */
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.current__temp {
+  display: flex; /* іконка + число в рядок */
+  align-items: center;
+}
+.current__temp img {
+  width: 120px;
+}
+.current__degrees {
+  font-size: 60px;
+  margin-left: 10px;
+}
+.current__unit {
+  font-size: 22px;
+  color: var(--color-muted);
+  align-self: flex-start; /* °F угорі */
+  margin-top: 20px;
+}
+
+.current__details {
+  width: 45%;
+  font-size: 22px;
+  color: var(--color-muted);
+}
+.current__details li {
+  margin: 6px 0;
+}
+.current__details span {
+  color: var(--color-text);
+}
+
+/* ---- список днів ---- */
+.day {
+  display: flex; /* 4 колонки в рядок */
+  align-items: center; /* по центру вертикально */
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 22px;
+}
+
+.day > * {
+  flex: 1;
+} /* усі 4 частини однакової ширини */
+
+.day__name {
+  font-weight: 700;
+}
+.day__icon {
+  max-width: 90px;
+}
+
+.day__temp {
+  display: flex; /* max над min */
+  flex-direction: column;
+}
+.day__temp span,
+.day__pollen {
+  color: var(--color-muted);
+}
+.day__pollen span {
+  color: var(--color-text);
+}
