@@ -1,0 +1,79 @@
+/* ===== CSS-змінні ===== */
+:root {
+    --cols: 5;              /* кількість стовпців сітки */
+    --gap: 16px;
+    --wide-height: 260px;   /* висота широкого фото */
+    --frame: 4px;           /* біла рамка навколо фото */
+    --bg: #f2f2f2;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.page {
+    padding: 30px 20px;
+    background-color: var(--bg);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.page__title {
+    margin-bottom: 24px;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* ===== Сітка галереї ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-auto-flow: dense; /* заповнює "дірки", коли стовпців стає менше */
+    gap: var(--gap);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.gallery__item {
+    aspect-ratio: 4 / 3;
+    padding: var(--frame);
+    background-color: #fff;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+/* Широке фото займає всі стовпці: від першої до останньої лінії */
+.gallery__item--wide {
+    grid-column: 1 / -1;
+    aspect-ratio: auto;
+    height: var(--wide-height);
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery__item:hover .gallery__img {
+    transform: scale(1.05);
+}
+
+/* ===== Адаптивність ===== */
+@media (max-width: 768px) {
+    :root {
+        --cols: 3;
+        --gap: 12px;
+        --wide-height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --cols: 2;
+        --gap: 8px;
+        --wide-height: 150px;
+    }
+
+    .page__title {
+        font-size: 22px;
+    }
+}

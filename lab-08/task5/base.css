@@ -1,0 +1,90 @@
+/* ===== Спільне оформлення (однакове для обох способів) ===== */
+:root {
+    --accent: #ff5a3c;
+    --page-bg: #fff8f7;
+    --block-bg: #fff;
+    --gap: 14px;
+    --radius: 6px;
+    --tablet: 768px;   /* довідково: межі медіазапитів */
+    --desktop: 992px;
+}
+
+.page {
+    padding: 20px;
+    background-color: var(--page-bg);
+    font-family: Poppins, Arial, sans-serif;
+    color: #333;
+}
+
+.layout {
+    display: grid;
+    gap: var(--gap);
+    max-width: 1100px;
+    min-height: calc(100vh - 40px);
+    margin: 0 auto;
+}
+
+.block {
+    padding: 10px 14px;
+    border: 3px solid var(--accent);
+    border-radius: var(--radius);
+    background-color: var(--block-bg);
+}
+
+.block__label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: #999;
+}
+
+.block__title {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.block__text {
+    line-height: 1.5;
+}
+
+.block__text + .block__text {
+    margin-top: 10px;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+/* Меню навігації — теж grid */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 6px;
+}
+
+.menu__link {
+    display: block;
+    padding: 6px;
+    border-radius: var(--radius);
+    text-align: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.menu__link:hover,
+.menu__link:focus-visible {
+    background-color: var(--accent);
+    color: #fff;
+}
+
+.links__item {
+    display: block;
+    padding: 4px 0;
+}
+
+.links__item:hover {
+    color: var(--accent);
+}
+
+.layout__main {
+    min-height: 260px;
+}
